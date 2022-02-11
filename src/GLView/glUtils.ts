@@ -68,10 +68,3 @@ export function glattr(program: WebGLProgram, name: string, gl: GLContext) {
 export function list(obj: any) {
   return Object.entries(obj);
 }
-
-//
-// export class VertexAttr {
-//   constructor (name, array, unit, dataType, arrayType, drawType){
-//
-//   }
-// }
