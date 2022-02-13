@@ -68,3 +68,17 @@ export function glattr(program: WebGLProgram, name: string, gl: GLContext) {
 export function list(obj: any) {
   return Object.entries(obj);
 }
+
+
+export function refreshMil(drawScene:any, then:any) {
+  function render(now: any) {
+    now *= 0.001;  // convert to seconds
+    const deltaTime = now - then;
+    then = now;
+
+    drawScene(deltaTime);
+
+    requestAnimationFrame(render);
+  }
+  return render
+}
